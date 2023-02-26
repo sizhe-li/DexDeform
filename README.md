@@ -5,6 +5,7 @@ Code and data for paper [DexDeform: Dexterous Deformable Object Manipulation wit
 
 ```bash
 conda env create -f environment.yml
+conda activate dexdeform
 pip install -e .
 ```
 
@@ -25,6 +26,9 @@ Demos are provided inside folder `demos`.
 
 - Our physics simulation written based on [PlasticineLab](https://github.com/hzaskywalker/PlasticineLab).
 
+# TODO
+- [ ] Support for DexDeform Algorithm (coming soon)
+- [ ] Support for Human Teleoperation (coming soon)
 
 # Citation
 

@@ -1,4 +1,4 @@
-name: dexdeform2
+name: dexdeform
 channels:
   - pytorch3d
   - iopath
@@ -232,4 +232,3 @@ dependencies:
     - threadpoolctl==3.1.0
     - transforms3d==0.4.1
     - werkzeug==2.2.3
-prefix: /home/sizheli/anaconda3/envs/dexdeform
