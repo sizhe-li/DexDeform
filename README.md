@@ -1,6 +1,8 @@
 # DexDeform
 Code and data for paper [DexDeform: Dexterous Deformable Object Manipulation with Human Demonstrations and Differentiable Physics](https://openreview.net/pdf?id=LIV7-_7pYPl) at ICLR 2023.
 
+![Alt Text](https://github.com/lester0866/DexDeform/blob/main/misc/flip.gif)
+
 # Installation
 
 ```bash
