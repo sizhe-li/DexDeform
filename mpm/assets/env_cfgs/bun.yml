@@ -1,0 +1,42 @@
+SIMULATOR:
+  n_particles: 10000
+  E: 40000.
+  nu: 0.2
+  yield_stress: 100.
+  ground_friction: 500.
+  quality: 1
+  max_steps: 1024
+  gravity: (0., -10., 0.)
+
+  mode: dual
+  ctrl_type: vel
+  scale: 2.5
+  hand_friction: 0.9
+
+SHAPES:
+  - shape: cylinder
+    h: 0.01
+    r: 0.16
+    init_pos: (0.5, 0.061875, 0.6)
+    n_particles: 10000
+
+RENDERER:
+  image_res: (128, 128)
+  ground_height: -0.5
+
+MANIPULATORS:
+  - hand_idx: 0
+    init_pos: (0.57, 0.1, 1.20)
+    init_rot: (-np.pi / 9, np.pi, np.pi)
+    init_qpos: zero
+    use_init_rot: False
+
+  - hand_idx: 1
+    init_pos: (0.67, -0.20, 0.17)
+    init_rot: (-np.pi / 4, 0., np.pi / 2)
+    init_qpos: (0.2, -0.2, 0.2617542841421349, 0.83880515005365824, 0.3, 0.1948,
+      0.21258463053436208, 0.10604584785514, 0.3657113285761675, 0.33434711186408567,
+      -0.0614268037875808, -0.010418013110735702, 0.1854599876476405, 0.005664391730251587, -0.0001299600476583228,
+      0.1516427879119035, 0.29273692791801315, 0.34361568585922564, 0.19359263235167584,
+      0.80472, 0.949, 0.10948207068069227, -0.0105, -0.0)
+    use_init_rot: False

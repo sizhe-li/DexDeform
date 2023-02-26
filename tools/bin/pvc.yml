@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  # Replace with ${USERNAME}-[slow/fast]-vol, e.g. user-slow-vol
+  name: hza-slow-pvc
+  namespace: ucsd-haosulab
+spec:
+  storageClassName: rook-cephfs # slow-vol
+  # storageClassName: rook-cephfs-haosu  # fast-vol
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Ti

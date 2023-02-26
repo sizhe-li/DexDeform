@@ -1,0 +1,31 @@
+SIMULATOR:
+  n_particles: 10000
+  E: 4000.
+  nu: 0.2
+  yield_stress: 250.
+  ground_friction: 500.
+  quality: 1
+  max_steps: 1024
+  gravity: (0., -10., 0.)
+
+  mode: rh
+  ctrl_type: vel
+  scale: 2.5
+  hand_friction: 0.9
+
+SHAPES:
+  - shape: cylinder
+    h: 0.01
+    r: 0.16
+    init_pos: (0.5, 0.061875, 0.6)
+    n_particles: 10000
+
+RENDERER:
+  image_res: (128, 128)
+
+
+MANIPULATORS:
+  - hand_idx: 0
+    init_pos: (0.5, 0.2, 0.3)
+    init_rot: (0., 0., 0.)
+    init_qpos: default

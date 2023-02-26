@@ -1,0 +1,61 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: hza-job-test # replace with "${USER_NAME}-{JOB_NAME}"
+  namespace: ucsd-haosulab
+spec:
+  ttlSecondsAfterFinished: 86400 # Wait one day to delete completed jobs
+  template:
+    spec:
+      containers:
+        - name: gpu-container
+          image: gitlab-registry.nrp-nautilus.io/hzaskywalker/docker:latest
+          # imagePullPolicy: Always
+          command:
+            - "bash"
+            - "-c"
+          args:
+            - "source /root/.bashrc; export PATH=/root/anaconda3/bin:$PATH; export DATA_PATH=/cephfs/hza/data; export MODEL_PATH=/cephfs/hza/models; conda activate; cd /root/Concept; git pull; cd WORKSPACE; CMD" # replace with actual command
+            # For multiple commands, concatenate them with &&
+          resources:
+            requests:
+              cpu: "1"
+              memory: "12Gi"
+              nvidia.com/gpu: "1"
+            limits:
+              cpu: "2"
+              memory: "20Gi"
+              nvidia.com/gpu: "1"
+          volumeMounts:
+            - name: dshm
+              mountPath: /dev/shm
+            - name: hza-slow-pvc
+              mountPath: /cephfs/hza
+      volumes:
+        - name: dshm  # shared memory, required for the multi-worker dataloader
+          emptyDir:
+            medium: Memory
+        - name: hza-slow-pvc
+          persistentVolumeClaim:
+            claimName: hza-slow-pvc
+      restartPolicy: Never
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: nautilus.io/group
+                    operator: In
+                    values:
+                      - haosu
+                  #- key: gpu-type
+                  #  operator: In
+                  #  values:
+                  #    - 1080Ti
+                  #    - 2080Ti
+                  - key: nvidia.com/gpu.product
+                    operator: In
+                    values:
+                      - NVIDIA-GeForce-GTX-1080-Ti
+                      - NVIDIA-GeForce-GTX-2080-Ti
+  backoffLimit: 0 # The number of attempts to restart after crash

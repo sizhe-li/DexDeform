@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hza-try # replace with "${USER_NAME}-{POD_NAME}"
+  namespace: ucsd-haosulab
+spec:
+  containers:
+    - name: gpu-container
+      image: gitlab-registry.nrp-nautilus.io/hzaskywalker/docker:latest # docker image
+      # imagePullPolicy: Always
+      args: ["sleep", "infinity"]
+      resources:
+        requests:
+          cpu: "1"
+          memory: "4Gi"
+          nvidia.com/gpu: "1"
+        limits:
+          cpu: "2"
+          memory: "8Gi"
+          nvidia.com/gpu: "1"
+      volumeMounts:
+        - name: dshm
+          mountPath: /dev/shm
+        - name: hza-slow-pvc
+          mountPath: /cephfs/hza
+  volumes:
+    - name: dshm # shared memory, required for the multi-worker dataloader
+      emptyDir:
+        medium: Memory
+    - name: hza-slow-pvc
+      persistentVolumeClaim:
+        claimName: hza-slow-pvc
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: nautilus.io/group
+                operator: In
+                values:
+                  - haosu
+              - key: nvidia.com/gpu.product
+                operator: In
+                values:
+                  - NVIDIA-GeForce-GTX-1080-Ti
+                  - NVIDIA-GeForce-RTX-2080-Ti

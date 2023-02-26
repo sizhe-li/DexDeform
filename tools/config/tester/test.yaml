@@ -1,0 +1,4 @@
+TYPE: td3
+actor_optim:
+  lr: 0.5
+  method: "actor_method"
