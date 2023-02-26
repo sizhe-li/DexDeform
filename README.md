@@ -26,7 +26,7 @@ Demos are provided inside folder `demos`.
 
 # Acknowledgements
 
-- Our physics simulation written based on [PlasticineLab](https://github.com/hzaskywalker/PlasticineLab).
+- Our physics simulation is written based on [PlasticineLab](https://github.com/hzaskywalker/PlasticineLab).
 
 # TODO
 - [ ] Support for DexDeform Algorithm (coming soon)
