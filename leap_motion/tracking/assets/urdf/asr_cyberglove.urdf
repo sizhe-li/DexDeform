@@ -1,0 +1,606 @@
+<?xml version="1.0" ?>
+<robot name="hand_right">
+
+    <material name="SkinColor">
+        <color rgba="1.0 0.88 0.74 1.0"/>
+    </material>
+
+    <link name="root">
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="base_0">
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="base">
+        <visual>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_0.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="SkinColor"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_0.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="pinky_meta_0">
+        <visual>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_1.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="SkinColor"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_1.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="pinky_meta">
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="pinky_proximal">
+        <visual>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_2.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="SkinColor"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_2.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="pinky_middle">
+        <visual>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_3.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="SkinColor"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_3.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="pinky_distal">
+        <visual>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_4.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="SkinColor"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_4.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="ring_meta_0">
+        <visual>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_6.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="SkinColor"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_6.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="ring_meta">
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="ring_proximal">
+        <visual>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_7.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="SkinColor"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_7.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="ring_middle">
+        <visual>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_8.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="SkinColor"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_8.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="ring_distal">
+        <visual>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_9.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="SkinColor"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_9.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="middle_meta_0">
+        <visual>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_11.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="SkinColor"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_11.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="middle_meta">
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="middle_proximal">
+        <visual>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_12.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="SkinColor"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_12.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="middle_middle">
+        <visual>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_13.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="SkinColor"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_13.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="middle_distal">
+        <visual>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_14.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="SkinColor"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_14.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="index_meta_0">
+        <visual>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_16.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="SkinColor"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_16.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="index_meta">
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="index_proximal">
+        <visual>
+            <geometry>
+            <mesh filename="package://meshes/asr_cyberglove//bone_0_17.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="SkinColor"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_17.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="index_middle">
+        <visual>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_18.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="SkinColor"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_18.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="index_distal">
+        <visual>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_19.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="SkinColor"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_19.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="thumb_meta_0">
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="thumb_meta">
+        <visual>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_21.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="SkinColor"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_21.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="thumb_proximal">
+        <visual>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_22.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="SkinColor"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_22.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="thumb_distal">
+        <visual>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_23.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="SkinColor"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://meshes/asr_cyberglove//bone_0_23.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <joint name="wr_j0" type="revolute">
+        <parent link="root"/>
+        <child link="base_0"/>
+        <origin xyz="0 0 0" rpy="1.57 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="-0.698131700798" upper="0.488692190558"/>
+    </joint>
+
+    <joint name="wr_j1" type="revolute">
+        <parent link="base_0"/>
+        <child link="base"/>
+        <axis xyz="1 0 0" />
+        <limit lower="-0.523598775598" upper="0.174532925199" />
+    </joint>
+
+    <joint name="base_pinky" type="fixed">
+        <parent link="base"/>
+        <child link="pinky_meta_0"/>
+        <origin xyz="-0.024912 0.008636 0.002422" rpy="2.80824 -0.811484 -2.74123" />
+    </joint>
+
+    <joint name="pi_j0" type="continuous">
+        <parent link="pinky_meta_0"/>
+        <child link="pinky_meta"/>
+        <origin xyz="0.000000 0.063265 -0.000000" rpy="0.0196487 -0.191181 0.113497" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <joint name="pi_j1" type="continuous">
+        <parent link="pinky_meta"/>
+        <child link="pinky_proximal"/>
+        <axis xyz="1 0 0" />
+    </joint>
+
+    <joint name="pi_j2" type="continuous">
+        <parent link="pinky_proximal"/>
+        <child link="pinky_middle"/>
+        <origin xyz="0.000000 0.034557 0.000000" rpy="0.0304249 -0.0981504 0.133914" />
+        <axis xyz="1 0 0" />
+    </joint>
+
+    <joint name="pi_j3" type="continuous">
+        <parent link="pinky_middle"/>
+        <child link="pinky_distal"/>
+        <origin xyz="0.000000 0.025298 -0.000000" rpy="-0.0317568 0.00503542 0.0988644" />
+        <axis xyz="1 0 0" />
+    </joint>
+
+    <joint name="base_ring" type="fixed">
+        <parent link="base"/>
+        <child link="ring_meta_0"/>
+        <origin xyz="-0.012468 0.014241 -0.007279" rpy="3.03476 -0.620396 -2.98236" />
+    </joint>
+
+    <joint name="ri_j0" type="continuous">
+        <parent link="ring_meta_0"/>
+        <child link="ring_meta"/>
+        <origin xyz="0.000000 0.069086 -0.000000" rpy="-0.153666 -0.161247 0.0107861" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <joint name="ri_j1" type="continuous">
+        <parent link="ring_meta"/>
+        <child link="ring_proximal"/>
+        <axis xyz="1 0 0" />
+    </joint>
+
+    <joint name="ri_j2" type="continuous">
+        <parent link="ring_proximal"/>
+        <child link="ring_middle"/>
+        <origin xyz="-0.000000 0.042662 -0.000000" rpy="0.0661994 0.10508 -0.0317381" />
+        <axis xyz="1 0 0" />
+    </joint>
+
+    <joint name="ri_j3" type="continuous">
+        <parent link="ring_middle"/>
+        <child link="ring_distal"/>
+        <origin xyz="0.000000 0.028928 0.000000" rpy="0.102201 -0.0505654 0.0213048" />
+        <axis xyz="1 0 0" />
+    </joint>
+
+    <joint name="base_middle" type="fixed">
+        <parent link="base"/>
+        <child link="middle_meta_0"/>
+        <origin xyz="0.001406 0.015512 -0.015156" rpy="3.13273 -0.39616 -3.08577" />
+    </joint>
+
+    <joint name="mi_j0" type="continuous">
+        <parent link="middle_meta_0"/>
+        <child link="middle_meta"/>
+        <origin xyz="0.000000 0.073864 -0.000000" rpy="-0.182864 0.0762588 -0.0585634" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <joint name="mi_j1" type="continuous">
+        <parent link="middle_meta"/>
+        <child link="middle_proximal"/>
+        <axis xyz="1 0 0" />
+    </joint>
+
+    <joint name="mi_j2" type="continuous">
+        <parent link="middle_proximal"/>
+        <child link="middle_middle"/>
+        <origin xyz="0.000000 0.047566 -0.000000" rpy="0.109335 -0.0553835 -0.0593373" />
+        <axis xyz="1 0 0" />
+    </joint>
+
+    <joint name="mi_j3" type="continuous">
+        <parent link="middle_middle"/>
+        <child link="middle_distal"/>
+        <origin xyz="0.000000 0.034300 -0.000000" rpy="-0.0872514 -0.116106 0.0635088" />
+        <axis xyz="1 0 0" />
+    </joint>
+
+    <joint name="base_index" type="fixed">
+        <parent link="base"/>
+        <child link="index_meta_0"/>
+        <origin xyz="0.013404 0.016245 -0.018323" rpy="-3.09499 -0.222842 3.05505" />
+    </joint>
+
+    <joint name="in_j0" type="continuous">
+        <parent link="index_meta_0"/>
+        <child link="index_meta"/>
+        <origin xyz="-0.000000 0.075750 -0.000000" rpy="-0.118925 0.0819517 -0.100102" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <joint name="in_j1" type="continuous">
+        <parent link="index_meta"/>
+        <child link="index_proximal"/>
+        <axis xyz="1 0 0" />
+    </joint>
+
+    <joint name="in_j2" type="continuous">
+        <parent link="index_proximal"/>
+        <child link="index_middle"/>
+        <origin xyz="0.000000 0.045655 -0.000000" rpy="-0.0306015 0.116715 -0.183591" />
+        <axis xyz="1 0 0" />
+    </joint>
+
+    <joint name="in_j3" type="continuous">
+        <parent link="index_middle"/>
+        <child link="index_distal"/>
+        <origin xyz="0.000000 0.023888 0.000000" rpy="0.102189 -0.0180627 -0.0869717" />
+        <axis xyz="1 0 0" />
+    </joint>
+
+    <joint name="th_j0" type="continuous">
+        <parent link="base"/>
+        <child link="thumb_meta_0"/>
+        <origin xyz="0.024445 0.010599 -0.003052" rpy="-2.87468 0.716929 2.69534" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <joint name="th_j1" type="continuous">
+        <parent link="thumb_meta_0"/>
+        <child link="thumb_meta"/>
+        <axis xyz="1 0 0" />
+    </joint>
+
+    <joint name="th_j2" type="continuous">
+        <parent link="thumb_meta"/>
+        <child link="thumb_proximal"/>
+        <origin xyz="0.000000 0.050024 -0.000000" rpy="-0.711146 -0.339941 -0.0309624" />
+        <axis xyz="1 0 0" />
+    </joint>
+
+    <joint name="th_j3" type="continuous">
+        <parent link="thumb_proximal"/>
+        <child link="thumb_distal"/>
+        <origin xyz="0.000000 0.034977 -0.000000" rpy="-0.00830731 0.0670157 0.0352878" />
+        <axis xyz="1 0 0" />
+    </joint>
+
+    <!-- additional dummy link and joint for using asr_flock_of_birds -->
+
+    <link name="fob_sensor">
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <joint name="fob_base" type="fixed">
+        <parent link="fob_sensor"/>
+        <child link="root"/>
+        <origin xyz="0 0 0" rpy="1.57 0 3.14" />
+    </joint>
+
+</robot>

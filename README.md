@@ -17,6 +17,7 @@ Demos are provided inside folder `demos`.
 
 - [Environment Loading] `demos/environment_loading.ipynb`
 - [Trajectory Optimization] `demos/trajectory_optimization.ipynb`
+- [Leap motion tracking module] `leap_motion/`
 
 # Implementation Details
 
@@ -29,8 +30,8 @@ Demos are provided inside folder `demos`.
 - Our physics simulation is written based on [PlasticineLab](https://github.com/hzaskywalker/PlasticineLab).
 
 # TODO
+- [x] Support for Human Teleoperation (Leap motion tracking module released, synchronization with simulation coming soon)
 - [ ] Support for DexDeform Algorithm (coming soon)
-- [ ] Support for Human Teleoperation (coming soon)
 
 # Citation
 
