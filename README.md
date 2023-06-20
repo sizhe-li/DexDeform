@@ -28,6 +28,8 @@ Demos are provided inside folder `demos`.
 # Acknowledgements
 
 - Our physics simulation is written based on [PlasticineLab](https://github.com/hzaskywalker/PlasticineLab).
+- Our leap motion tracking module is written based on [this repo](https://github.com/szahlner/shadow-teleop/tree/main/leap_motion).
+
 
 # TODO
 - [x] Support for Human Teleoperation (Leap motion tracking module released, synchronization with simulation coming soon)
