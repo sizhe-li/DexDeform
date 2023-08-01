@@ -11,13 +11,16 @@ conda activate dexdeform
 pip install -e .
 ```
 
-# Demo
+# Download Demonstrations
 
-Demos are provided inside folder `demos`.
+Download [here](https://drive.google.com/drive/folders/1xVS9ui5eHVCBFvmIAQ_mRqacEj-0__Hr?usp=sharing). For loading demonstrations, checkout `tutorials/demonstration_loading.ipynb`.
 
-- [Environment Loading] `demos/environment_loading.ipynb`
-- [Trajectory Optimization] `demos/trajectory_optimization.ipynb`
+# Tutorials
+
+- [Environment Loading] `tutorials/environment_loading.ipynb`
+- [Trajectory Optimization] `tutorials/trajectory_optimization.ipynb`
 - [Leap motion tracking module] `leap_motion/`
+- [Demonstration Loading] `tutorials/demonstration_loading.ipynb`
 
 # Implementation Details
 
@@ -33,6 +36,7 @@ Demos are provided inside folder `demos`.
 
 # TODO
 - [x] Support for Human Teleoperation (Leap motion tracking module released, synchronization with simulation coming soon)
+- [x] Release demonstrations
 - [ ] Support for DexDeform Algorithm (coming soon)
 
 # Citation

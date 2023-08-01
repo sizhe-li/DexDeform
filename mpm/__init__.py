@@ -5,8 +5,7 @@ from tools import CN
 from tools.config import merge_inputs
 from .mujoco_parser import ASSETS_DIR
 
-SUPPORTED_ENVS = ["folding", "flip", "dumpling", "bun", "wrap", "wrap_ball", "lift_box"]
-
+SUPPORTED_ENVS = ["folding", "rope", "bun", "dumpling", "wrap", "flip", "lift_box"]
 
 def get_default_cfg(cfg_path, sim_cfg=None):
     assert os.path.exists(cfg_path), "config file does not exist!"
