@@ -11,16 +11,25 @@ conda activate dexdeform
 pip install -e .
 ```
 
+##### Install Sinkhorn Distance Metric
+
+```bash
+pip install pykeops
+pip install geomloss
+```
+
+
 # Download Demonstrations
 
 Download [here](https://drive.google.com/drive/folders/1xVS9ui5eHVCBFvmIAQ_mRqacEj-0__Hr?usp=sharing). For loading demonstrations, checkout `tutorials/demonstration_loading.ipynb`.
 
 # Tutorials
 
-- [Environment Loading] `tutorials/environment_loading.ipynb`
-- [Trajectory Optimization] `tutorials/trajectory_optimization.ipynb`
+- [Environment Loading] `tutorials/1_environment_loading.ipynb`
+- [Trajectory Optimization] `tutorials/2_trajectory_optimization.ipynb`
 - [Leap motion tracking module] `leap_motion/`
-- [Demonstration Loading] `tutorials/demonstration_loading.ipynb`
+- [Demonstration Loading] `tutorials/3_demonstration_loading.ipynb`
+- [Computing Score] `tutorials/4_computing_score.ipynb`
 
 # Implementation Details
 
