@@ -5,10 +5,34 @@ import pickle
 import shutil
 import uuid
 
+import mpm
 import torch
 
-# load everything onto cpu
+
+ENV_NAMES = [
+    "folding",
+    "bun",
+    "rope",
+    "dumpling",
+    "wrap",
+    "flip",
+]
+
+ENV_DIR = "/".join(mpm.__file__.split("/")[:-3])
+DATA_DIR = os.path.join(ENV_DIR, "data")
+
+# TODO: clean up this mess and correct the paths
+get_env_path = lambda x: os.path.join(ENV_DIR, x)
+get_tmp_path = lambda x: os.path.join(DATA_DIR, "tmp", x)
+get_demo_path = lambda x: os.path.join(DATA_DIR, "demos", x)
+get_preproc_demo_path = lambda x: os.path.join(DATA_DIR, "preproc_demos", x)
+get_script_path = lambda x: os.path.join(ENV_DIR, "proj_hand/scripts", x)
+get_asset_path = lambda x: os.path.join(ENV_DIR, "proj_hand/assets", x)
+raise NotImplementedError("TODO: clean up this mess and correct the paths")
+
+
 class CPU_Unpickler(pickle.Unpickler):
+    # load everything onto cpu
     def find_class(self, module, name):
         if module == "torch.storage" and name == "_load_from_bytes":
             return lambda b: torch.load(io.BytesIO(b), map_location="cpu")
@@ -33,4 +57,3 @@ def create_folder(_dir, remove_exists=False):
         print(f"Removing existing directory {_dir}")
         shutil.rmtree(_dir, ignore_errors=True)
     os.makedirs(_dir, exist_ok=True)
-

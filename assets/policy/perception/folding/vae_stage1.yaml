@@ -1,0 +1,58 @@
+method: scene_vae
+data:
+  padding: 0.0
+  num_points: 3000
+  temporal_distance: 20
+model:
+  obs_encoder: pointnet_local_pool
+  occ_decoder: simple_local
+
+  c_dim: 64
+  padding: 0.0
+  plane_resolution: 128
+  obs_encoder_kwargs:
+    dim: 4
+    hidden_dim: 64
+    unet: True
+    unet_kwargs:
+      depth: 5
+      merge_mode: concat
+      start_filts: 32
+
+  occ_decoder_kwargs:
+    dim: 3
+    n_blocks: 5
+    hidden_size: 32
+    sample_mode: bilinear
+
+  vae_btlneck_kwargs:
+    z_dim: 128
+
+
+loss:
+  plcholder: none
+
+training:
+  train_occ: True
+  train_vae: False
+  out_dir: result/vae/stage1
+  ckpt_file: None
+  model_selection_metric: occ_loss
+  model_selection_mode: minimize
+  print_every: 5
+  visualize_every: 1000
+  validate_every: 1000
+  checkpoint_every: 1000
+  backup_every: 1000
+  batch_size: 64
+  batch_size_val: 16
+  n_workers: 16
+  n_workers_val: 4
+  max_it: 5500
+
+test:
+  threshold: 0.75
+  plcholder: none
+
+generation:
+  plcholder: none

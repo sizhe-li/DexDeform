@@ -1,0 +1,35 @@
+method: skill
+data:
+  n_horizon_clips: 3
+  horizon_length: 10
+  num_points: 3000
+
+model:
+  n_hands: 1
+  action_dim: 26
+  state_dim: 128
+  latent_dim: 128
+
+  state_encoder_kwargs:
+    ckpt_file: prior_policy/folding_tune_vae/result/vae/stage2/model_best.pt
+
+loss:
+  kl_weights: 0.0001
+#  kl_warm_up_step: 5000
+
+
+training:
+  train_vae: False
+  out_dir: result/skill/base
+  model_selection_metric: act_loss
+  model_selection_mode: minimize
+  print_every: 5
+  visualize_every: 1000
+  validate_every: 1000
+  checkpoint_every: 1000
+  backup_every: 1000
+  batch_size: 16
+  batch_size_val: 16
+  n_workers: 16
+  n_workers_val: 16
+  max_it: 50000

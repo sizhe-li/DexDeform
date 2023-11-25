@@ -5,11 +5,12 @@ import numpy as np
 
 
 class Viewer:
+    # TODO: clean up this class
     def __init__(self, env: HandEnv):
         self.env = env
 
         self.view_order = ["side", "front", "top", "bot"]
-        if self.env.cfg.env_name in ["ball", "star"]:
+        if self.env.cfg.env_name in ["flip"]:
             self.view_order = ["top", "side", "front", "bot"]
 
         self.views = {
@@ -20,7 +21,7 @@ class Viewer:
         }
 
         # TODO: move to config file
-        if self.env.cfg.env_name == "ball":
+        if self.env.cfg.env_name == "flip":
             self.views["v1"] = {'center': np.array([0.70002909, 0.36180185, 0.59979075]),
                                 'theta': 0.59269908169872414,
                                 'phi': -1.5707963267948966,
@@ -82,7 +83,7 @@ class Viewer:
             # global views
             self.views["front"]["center"] = center + np.array([0., 0.3, 1.2])
             self.views["side"]["center"] = center + np.array([0.7, 0.3, 0.0])
-            if self.env.cfg.env_name in ["ball", "star"]:
+            if self.env.cfg.env_name in ["flip"]:
                 self.views["top"]["center"] = center + np.array([0., 0.2, 0.])
             else:
                 self.views["top"]["center"] = center + np.array([0., 0.9, 0.])

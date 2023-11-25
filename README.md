@@ -46,7 +46,7 @@ Download [here](https://drive.google.com/drive/folders/1xVS9ui5eHVCBFvmIAQ_mRqac
 # TODO
 - [x] Support for Human Teleoperation (Leap motion tracking module released, synchronization with simulation coming soon)
 - [x] Release demonstrations
-- [ ] Support for DexDeform Algorithm (coming soon)
+- [x] Support for DexDeform Algorithm (template uploaded, cleanup needed to support dataloding.)
 
 # Citation
 
