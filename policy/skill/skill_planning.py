@@ -10,7 +10,7 @@ import tqdm
 from mpm import HandEnv
 from mpm.viewer import Viewer
 
-from .coordinate_conversion import (
+from ..perception.utils.coordinate_conversion import (
     IPLCT_COORD_RANGE,
     PLAB_COORD_RANGE,
     find_T_prim_to_keypts,
